@@ -15,7 +15,7 @@ body {
 h1 {
 	background-color: rgb(142, 150, 168);
 	color: rgb(236, 239, 247);
-	font-size: 45px;
+	font-size: 3em;
 	padding: 1em .25em 1em;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -25,7 +25,7 @@ h1 {
 h2 {
 	background-color: rgb(142, 150, 168);
 	color: rgb(236, 239, 247);
-	font-size: 40px;
+	font-size: 2.5em;
 	padding: 0em .35em 1em;
 	font-family: serif;
 	font-weight: bold;
@@ -34,12 +34,12 @@ h2 {
 h3 {
 	margin: 3em 0.5em 0.5em;
 	padding-top: .5em;
-	font-size: 25px;
+	font-size: 1.5em;
 	color: rgb(201, 20, 20);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	border-top: 5px solid;
+	border-top: .2em solid;
 }
 
 h4 {
