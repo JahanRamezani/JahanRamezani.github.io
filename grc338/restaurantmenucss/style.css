@@ -1,0 +1,64 @@
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+body {
+	background-color: rgb(236, 239, 247);
+	color: #282733;
+	line-height: 140%;
+	font-family: sans-serif;
+}
+
+h1 {
+	background-color: rgb(142, 150, 168);
+	color: rgb(236, 239, 247);
+	font-size: 45px;
+	padding: 1em .25em 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+h2 {
+	background-color: rgb(142, 150, 168);
+	color: rgb(236, 239, 247);
+	font-size: 40px;
+	padding: 0em .35em 1em;
+	font-family: serif;
+	font-weight: bold;
+}
+
+h3 {
+	margin: 3em 0.5em 0.5em;
+	padding-top: .5em;
+	font-size: 25px;
+	color: rgb(201, 20, 20);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	border-top: 5px solid;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+p.description {
+	font-style: italic;
+}
+
+p.price {
+	color: rgb(201, 20, 20);
+}
+
+ul {
+	margin: 1em 0em 2em;
+}
+
+li { 
+	margin: 1.5em .75em;
+	list-style-type: none;
+}
