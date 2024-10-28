@@ -1,0 +1,89 @@
+/*CSS DOCUMENT*/
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;} /*My edited version of the Eric Meyer’s reset tool. You may want to include this in all of your future CSS files. */
+
+body {
+    background-color: rgb(213, 213, 213);
+}
+
+.container {
+    max-width: 70em;
+    margin: auto;
+    background-color: white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 3em;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin-bottom: 3em;
+}
+
+img {
+    width: 100%; /*Please leave this line.*/
+     display: block;
+}
+
+h1 {
+	background-color: rgb(241, 145, 0);
+	color: rgb(236, 239, 247);
+	font-size: 2.4em;
+	padding: 1em .5em .1em;
+    font-family: Sutro, serif;
+	font-weight: bold;
+}
+
+h2 {
+	background-color: rgb(241, 145, 0);
+	color: rgb(255, 228, 169);
+	font-size: 1.4em;
+	padding: 0em .6em 1em;
+	font-family: Sutro, serif;
+}
+
+h3 {
+    font-family: Sutro, serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: rgb(241, 145, 0);
+    margin-left: 2em;
+    padding-top: 1.1em;
+    letter-spacing: .1em;
+    border-top: solid rgb(241, 145, 0) 2px;
+}
+
+figcaption {
+    font-size: 1em;
+    font-style: italic;
+    margin: 2em 2em 2em 2em;
+    font-family: Poppins, serif;
+}
+
+ul {
+	margin: 1em 1em 2em 0.6em;
+}
+
+ol {
+    margin: 1em 1em 2em 0.6em;
+}
+
+li { 
+	margin: 1.5em 2em 2em 1.6em;
+    font-family: Poppins, serif;
+    font-size: 1.2em;
+}
+
+footer {
+	background-color: rgb(241, 145, 0);
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+	padding: 1em .35em 1em 1.6em;;
+}
+
+
+/*By the way, when we use the slash-asterisk combo, it’s a comment on the CSS and it’s meant for human beings. The machine knows it is not supposed to process anything until it finds a asterisk-slash combo that ends the comment on the CSS. */
