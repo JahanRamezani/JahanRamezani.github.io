@@ -1,0 +1,97 @@
+/*CSS DOCUMENT*/
+
+body {
+	font-family: sans-serif;
+	line-height: 1.4em;
+	color: #222;
+	background-color: #fafafa;
+	box-sizing: border-box;
+	}
+	
+div.container {
+        max-width: 40em;
+        margin: 1em;
+        padding: 1em;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+section {
+    background: #eee;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+section p {
+	margin-top: 0;
+}
+
+h3 {
+	margin: 0;
+}
+
+textarea {
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	height: 6em;
+	background: #fcfcfc;
+	border: 1px solid #e8e8e8;
+	padding: 0.4em;
+	font-family: sans-serif;
+	color: #777;
+	}
+
+/*Section: Personal Info*/
+
+section.personal-info ul li {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 1em;
+}
+
+section.personal-info ul label {
+	flex: 0 0 8em;
+}
+
+section.personal-info ul li input[type="text"],
+section ul li input[type="email"],
+section ul li input[type="tel"],
+section ul li select {
+	flex: 4 1 32em; /* Although not the same as in the tutorial, I added a flex-shrink of 1 so that the input wouldn't go outside of the container on super small screens*/
+	box-sizing: border-box;
+}
+
+/*Section: Order*/
+
+section.order ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.order ul li {
+	flex: 1 0 15em;
+}
+
+/*Section: Method*/
+
+section.method ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.method ul li {
+	flex: 1 0 15em;
+}
+
+
+@media only screen and (min-width: 40em) {
+
+  div.container {
+    margin: auto;
+  }
+
+}
