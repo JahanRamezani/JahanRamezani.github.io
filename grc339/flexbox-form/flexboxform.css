@@ -50,7 +50,7 @@ textarea {
 section.personal-info ul li {
 	display: flex;
 	flex-wrap: wrap;
-	padding-bottom: 1em;
+	margin-bottom: 1em;
 }
 
 section.personal-info ul label {
