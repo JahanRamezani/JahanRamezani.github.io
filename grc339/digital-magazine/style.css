@@ -1,0 +1,171 @@
+/*CSS document*/
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit;}
+
+.container {
+    max-width: 50em;
+    margin: auto;
+    padding-top: 2em;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a, li {
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Nav */
+
+header {
+    margin: .5em;
+}
+
+h1 {
+    width: 10em;
+    padding-bottom: 1em;
+}
+
+li a {
+    font-size: 1.5em;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #0a6986;
+}
+
+/* Main Stories */
+
+.story h2 {
+    font-size: 2.3em;
+    font-family: serif;
+    font-weight: bold;
+    margin: .25em .25em 0 .25em;
+    color: #0a6986;
+}
+
+.story p {
+    font-size: 1.2em;
+    font-family: sans-serif;
+    margin: .5em;
+    padding: 0 0 1.5em 0;
+}
+
+/* Tertiary Stories */
+
+.tertiary {
+    border-top: .1em solid #0a6986;
+    margin: .5em;
+    padding: .5em 0 .5em 0;
+}
+
+.tertiary h2 {
+    color: #0a6986;
+    font-size: 1.3em;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.tertiary p {
+    font-family: sans-serif;
+    font-size: 1.1;
+}
+
+/* Article */
+
+article h2 {
+    font-size: 2.5em;
+    font-family: serif;
+    font-weight: bold;
+    margin: .25em .25em 0 .25em;
+    color: #0a6986;
+}
+
+article p {
+    font-size: 1.2em;
+    font-family: sans-serif;
+    margin: .5em;
+    padding: 0 0 1.5em 0;
+}
+
+figcaption {
+    font-family: sans-serif;
+    margin: .5em;
+    padding: .5em 0 1.5em 0;
+    font-style: italic;
+    color: #5f5f5f
+}
+
+/* Aside */
+
+aside {
+    background: #c8e1ff;
+    padding: .5em;
+}
+
+/* Footer */
+
+footer {
+    background-color: #0a6986;
+    color: #ffffff;
+    padding: 1.5em .5em 1.5em .5em;
+    font-size: 1.2em;
+    font-family: sans-serif;
+}
+
+/* Widescreen */
+
+@media only screen and (min-width: 40em) {
+
+    /* Nav */
+
+    header {
+        margin: 0 0 .5em 0;
+    }
+
+    li {
+        display: inline;
+        padding: 0 .5em 0 0;
+    }
+
+    /* Main Stories */
+
+    .story h2 {
+        margin: 0;
+    }
+
+    .story p {
+        margin: 0 0 1.5em 0;
+    }
+
+    /* Tertiary Stories */
+
+    .tertiary {
+        margin: 0;
+        padding: .5em 0 1.3em 0;
+    }
+
+    /* Article */
+
+    article h2 {
+        margin: 0;
+    }
+
+    article p {
+        margin: 0;
+    }
+
+    figcaption {
+        margin: 0;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 1.5em 0 1.5em 0;
+    }
+
+}
