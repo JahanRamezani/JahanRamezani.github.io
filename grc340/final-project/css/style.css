@@ -2,7 +2,7 @@
 /* General Setup */
 /* --------------------- */
 body {
-  background: url(JahanRamezani.github.io/grc340/final-project/assets/background.jpg) center center/cover no-repeat;
+  background: url(../assets/background.jpg) center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -264,6 +264,7 @@ ul, li {
 #tab2 h1 {
   color: #ffffff;
 }
+
 
 
 
