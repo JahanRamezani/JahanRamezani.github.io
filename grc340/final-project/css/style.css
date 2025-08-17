@@ -8,6 +8,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: sans-serif;
+  background-color: #ff8400;
 }
 
 /* Remove list bullets from ul and li */
@@ -263,6 +264,7 @@ ul, li {
 #tab2 h1 {
   color: #ffffff;
 }
+
 
 
 
