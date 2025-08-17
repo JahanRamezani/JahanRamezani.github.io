@@ -1,69 +1,153 @@
-/* General setup */
+/* --------------------- */
+/* General Setup */
+/* --------------------- */
 body {
-  margin: 0;
-  font-family: sans-serif;
   background: url(/assets/background.jpg) center center/cover no-repeat;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
 }
 
-/* Header */
-.header {
+/* Remove list bullets from ul and li */
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------- */
+/* Tabs */
+/* --------------------- */
+.tabs {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  background: #8a9773;
+  border-radius: 2em;
+  margin: 1em 1em 2em 1em;
+}
+
+.tabs li {
   padding: 10px 20px;
-  background-color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  color: #11110d;
+}
+
+.tabs li.current {
+  background: #520404;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Tab content areas */
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.current {
+  display: block;
+}
+
+/* --------------------- */
+/* Two-Column Layout (Home & End pages) */
+/* --------------------- */
+.page-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 90em;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-column, .right-column {
+  flex: 1 1 300px; /* flexible with min width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-column {
+  background-color: #8a9773;
+  padding: 2em;
+  border-radius: 2em;
+  gap: 1em;
+}
+
+.right-column p {
+  margin-bottom: 1em;
+  min-height: 2em;
+}
+
+#tab3 .left-column {
+  background-color: #8a9773;
+  padding: 2em;
+  border-radius: 2em;
+  gap: 1em;
+}
+
+.right-column input[type="text"] {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border: 2px solid #520404;
+  border-radius: 1em;
+  width: 100%;
+  max-width: 20em;
+}
+
+/* --------------------- */
+/* Shelf & Record Player Layout */
+/* --------------------- */
+.shelf-player-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* wrap on smaller screens */
+  margin: 2rem 0;
 }
 
 /* Shelf */
 .shelf {
+  flex: 1 1 600px; /* flexible width with min 600px */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  width: 80%;
-  max-width: 1200px;
-  aspect-ratio: 2 / 1;
-  margin: 20px auto;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 75em; /* adjust max size of shelf */
 }
 
 .slot {
-  background-color: rgba(255,255,255,0.9);
+  aspect-ratio: 1 / 1;
+  background-color: #8a9773;
+  border: 3px solid #520404;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #333;
   overflow: hidden;
-  position: relative;
-  padding: 5px;
+  min-width: 0;
+  box-shadow: -5px 10px 13px 5px rgba(0,0,0,0.29);
+  border-radius: 2em;
 }
 
 /* Bottom Section */
 .bottom-container {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
+  max-width: 90em;
   margin: auto;
-  padding: 10px 0;
+  padding: 2em;
 }
 
-/* Basket Section */
-.basket-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Basket layout: 2 horizontal rows */
 .basket {
   display: grid;
-  grid-template-rows: repeat(2, 90px);
-  grid-auto-columns: 90px;
+  grid-template-rows: repeat(2, auto);
   grid-auto-flow: column;
   gap: 5px;
-  width: max-content;
   padding: 5px;
 }
 
@@ -72,31 +156,34 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 0 0 250px;
 }
 
 .record-player {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 200px;
-  border: 2px dashed #333;
-  background: none;
+  width: 15em;
+  height: 15em;
   position: relative;
+  box-shadow: -5px 10px 13px 5px rgba(0,0,0,0.29);
+  background-color: #8a9773;
+  border: 3px solid #520404;
 }
 
 .record-player .slot {
   position: relative;
   width: 100%;
   height: 100%;
-  background: none;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Vinyl items */
+/* --------------------- */
+/* Vinyl Items */
+/* --------------------- */
 .draggable-item {
   width: 100%;
   height: 100%;
@@ -109,26 +196,70 @@ body {
   object-fit: contain;
 }
 
-/* Remove list bullets */
-ul, li { list-style: none; margin: 0; padding: 0; }
-
-/* Placeholder for drag & drop */
-.placeholder {
-  border: 2px dashed #999;
-  background-color: rgba(200,200,200,0.3);
-}
-
+/* --------------------- */
 /* Vinyl Form Popup */
+/* --------------------- */
 .vinyl-form {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   border: 2px solid #333;
   padding: 20px;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* --------------------- */
+/* Album List (End Page) */
+/* --------------------- */
+.album-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.album-list li {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.album-list img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.25em;
+  flex-shrink: 0;
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-title {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.album-caption {
+  font-size: 0.85em;
+  color: #11110d;
+}
+
+/* --------------------- */
+/* Editing Some Extra Colors (My css is a MESS!) */
+/* --------------------- */
+
+#tab2 h1 {
+  color: #ffffff;
 }
