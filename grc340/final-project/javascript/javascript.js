@@ -91,9 +91,9 @@ function setupSortable() {
         ui.sender.append($existingVinyl);
       }
 
-      // Play audio if vinyl dropped in record player
+      // Play audio immediately if vinyl dropped in record player
       if ($target.hasClass('record-player')) {
-        const audioFile = $target.find('img').data('audio');
+        const audioFile = ui.item.find('img').data('audio');
         if (currentAudio) currentAudio.pause();
         currentAudio = new Audio(audioFile);
         currentAudio.play();
@@ -106,6 +106,7 @@ function setupSortable() {
     }
   }).disableSelection();
 }
+
 
 // ---------------------
 // Click Popup
@@ -180,3 +181,4 @@ function setupNameInput() {
     }
   });
 }
+
