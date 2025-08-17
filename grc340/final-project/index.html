@@ -2,40 +2,213 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>GrC 340 - Final Project</title>
-    <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>GrC 340 - Final Project</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="header">
-  <h1 id="playerNameTitle"></h1>
-  <button id="finishBtn">Finish</button>
-</div>
+  <ul class="tabs">
+    <li data-tab="tab1" class="current">Home</li>
+    <li data-tab="tab2">Shelf</li>
+    <li data-tab="tab3">End</li>
+  </ul>
 
-<div class="shelf"></div>
-
-<div class="bottom-container">
-  <div class="basket-section">
-    <h2>Vinyl Basket</h2>
-    <div class="basket"></div>
-  </div>
-
-  <div class="player-section">
-    <h2>Record Player</h2>
-    <div class="record-player">
-      <ul class="slot connected-sortable"></ul>
+  <div id="tab1" class="tab-content current">
+    <div class="page-container">
+      <div class="left-column">
+        <img class="logo" src="/assets/logo.svg" alt="Logo">
+      </div>
+      <div class="right-column">
+        <h1>
+          Hi, I'm Jahan Ramezani. My enemies call me Jonkers.
+          </h2>
+          <p>
+            If there's one thing I'm pretentious about, it's shoving my weird music taste in the face of people who
+            don't care. That's why, for my GrC 340 Final Project, I've made an interactive Vinyl shelf that you can
+            decorate! The catch? It's all MY music. If you like psych rock, folk, or anything else weird, I think you'll
+            enjoy this. Don't? Uh, then I'm sorry you had to deal with this.
+          </p>
+          <p>
+            jQuery was quite hard to use, especially since I had to learn a bit about jQuery UI for this project. I
+            think I bit off a bit more than I could chew. So I wanted to credit Tara Jensen for her jQuery UI Drag and
+            Sort template, which I used as a starting point for this project.
+            <a href="https://codepen.io/TLJens/pen/rayYRe">Check out the Codepen File here</a>
+          </p>
+          <h2>HOW TO PLAY</h2>
+          <p>I should preface that this has a few bugs. I think this was way above my paygrade. First, scrol down and enter your name! Js will store that data, and show it on the next page! Once you enter the game,
+            feel free to drag the Vinyl's in the bottom left corner around the screen! You can put it into the record
+            player and enjoy a song off the album. You can also put them vinyls on your shelf, and it will prompt you to
+            enter the artist name and genre. If you get it correct, the data will store! You can click on a vinyl again
+            to see what Genre and Artist it is. Need a hint? The album credits are on the End tab!
+          </p>
+          </h2>
+          <h2>Enter Name</h2>
+          <input type="text" id="playerNameInput" placeholder="Enter Your Name">
+      </div>
     </div>
   </div>
-</div>
+  <div id="tab2" class="tab-content">
+    <h1 id="shelfTitle"></h1>
+
+    <!-- Shelf -->
+    <div class="shelf-player-container">
+      <div class="shelf">
+        <div class="slot connected-sortable"></div>
+        <div class="slot connected-sortable"></div>
+        <div class="slot connected-sortable"></div>
+        <div class="slot connected-sortable"></div>
+        <div class="slot connected-sortable"></div>
+        <div class="slot connected-sortable"></div>
+        <div class="slot connected-sortable"></div>
+        <div class="slot connected-sortable"></div>
+      </div>
+
+      <div class="player-section">
+        <h1>Record Player</h2>
+          <div class="record-player connected-sortable"></div>
+      </div>
+    </div>
+
+    <!-- Bottom section -->
+    <div class="bottom-container">
+      <div class="basket connected-sortable"></div>
+    </div>
+
+    <!-- Vinyl -->
+    <div class="vinyl-form" style="display:none;">
+      <label>Artist:
+        <select id="artistSelect"></select>
+      </label>
+      <label>Genre:
+        <select id="genreSelect"></select>
+      </label>
+      <button id="saveVinyl">Save</button>
+    </div>
+  </div>
+
+  <div id="tab3" class="tab-content">
+    <div class="page-container">
+      <div class="left-column">
+        <h1>
+          Thanks for Playing!
+          </h2>
+          <p>
+            I hope that you feel a little more pretentious about your music taste. Hey! Why not try it out? Next time
+            you're on a car trip with friends, suggest putting on one of the albums shown here. THEN: Prevent them from
+            skipping any of the songs on the album! Pretentious!
+          </p>
+          <p>
+            I used a lot of jQuery and jQuery UI for this project, especially to shorten much of the code, and store my
+            data. As mentioned earlier, I also had to use jQuery UI to follow the reference, which used draggable().
+            jQuery was also responsible for the tags that allow for the sorting of the vinyl images. Was this easy? No!
+            I really regret this! I had to ask my cousin for help.
+          </p>
+          </h2>
+          <h2>I hope this garners me an A, or at least a B+!</h2>
+      </div>
+      <div class="right-column">
+        <h2>Songs Used</h2>
+        <ul class="album-list">
+          <li>
+            <img src="assets/1.jpg">
+            <div class="album-info">
+              <span class="album-title">Blue Rev</span>
+              <span class="album-caption">Alvvays, Rock</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/2.jpeg">
+            <div class="album-info">
+              <span class="album-title">Quarters!</span>
+              <span class="album-caption">King Gizzard & The Lizard Wizard, Rock</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/3.jpg">
+            <div class="album-info">
+              <span class="album-title">Speaking in Tongues</span>
+              <span class="album-caption">Talking Heads, New Wave</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/4.jpg">
+            <div class="album-info">
+              <span class="album-title">Tapestry</span>
+              <span class="album-caption">Carole King, Folk</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/5.jpg">
+            <div class="album-info">
+              <span class="album-title">Pet Sounds</span>
+              <span class="album-caption">The Beach Boys, Pop</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/6.jpg">
+            <div class="album-info">
+              <span class="album-title">The Trial of Von Occupanther</span>
+              <span class="album-caption">Midlake, Folk</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/7.jpg">
+            <div class="album-info">
+              <span class="album-title">Yarin Yoksa</span>
+              <span class="album-caption">Derya Yildirim & Grup Şimşek, Folk</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/8.jpg">
+            <div class="album-info">
+              <span class="album-title">Flight b741</span>
+              <span class="album-caption">King Gizzard & The Lizard Wizard, Blues</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/9.jpg">
+            <div class="album-info">
+              <span class="album-title">Charm</span>
+              <span class="album-caption">Clairo, Pop</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/10.jpg">
+            <div class="album-info">
+              <span class="album-title">The Music That I Make</span>
+              <span class="album-caption">Leah Senior, Folk</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/11.jpg">
+            <div class="album-info">
+              <span class="album-title">Expert in a Dying Field</span>
+              <span class="album-caption">The Beths, Rock</span>
+            </div>
+          </li>
+          <li>
+            <img src="assets/12.jpg">
+            <div class="album-info">
+              <span class="album-title">K.G.</span>
+              <span class="album-caption">King Gizzard & The Lizard Wizard, Microtonal</span>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
 
 
-<script src="javascript/jquery-3.7.1.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script src="javascript/javascript.js"></script>
 
+
+
+  <script src="javascript/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="javascript/javascript.js"></script>
 
 </body>
 
