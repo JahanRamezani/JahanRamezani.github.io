@@ -46,8 +46,7 @@ li {
 
 li a:hover {
     border-bottom: 3px solid #A3B18A;
-    transition: .3s ease-out;
-    font-weight: bold;   
+    transition: .3s ease-out;   
 }
 
 /* Font Family */
