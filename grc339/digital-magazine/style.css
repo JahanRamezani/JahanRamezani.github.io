@@ -493,6 +493,10 @@ button:hover {
 
     /* Image Gallery */
 
+    .photo-gallery {
+            padding: 1em 0;
+    }
+
     .gallery-container {
         width: 100%;
     }
